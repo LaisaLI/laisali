@@ -3,149 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YILIN LI's Personal Home Page</title>
+    <title>Yilin Li</title>
     <style>
+        :root {
+            --text: #222;
+            --muted: #666;
+            --link: #0645ad;
+            --border: #d8d8d8;
+            --background: #ffffff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 16px;
+            line-height: 1.55;
         }
-        header {
-            display: flex; /* Enable flexbox */
-            flex-direction: column; /* Stack items vertically */
-            justify-content: flex-start; /* Align items to the top */
-            align-items: flex-end; /* Align items to the right */
-            min-height: 350px;
-            background-image: url('./profile_pic.jpg'); /* Background image */
-            background-size: cover; /* This makes sure the background covers the header */
-            background-position: center; /* Center the image */
-            color: white; /* Keep text color white for contrast */
-            padding: 20px 60px;
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 24px 48px;
         }
+
         h1 {
-            margin: 0;
-            font-size: 2.5em;
+            margin: 0 0 6px;
+            font-size: 2.1rem;
+            font-weight: 600;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+
         h2 {
-            color: #1B5289;
+            margin: 34px 0 14px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.35rem;
+            font-weight: 600;
         }
+
         h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #555;
+            margin: 24px 0 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
         }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
+
+        p {
+            margin: 0 0 12px;
         }
-        .contact-info {
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
+
         a {
-            color: #1B5289;
+            color: var(--link);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        .topline {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .links {
+            margin-bottom: 24px;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .profile-photo {
+            width: 210px;
+            max-width: 100%;
+            border: 1px solid var(--border);
+        }
+
+        ul, ol {
+            margin-top: 6px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .pub-list {
+            padding-left: 24px;
+        }
+
+        .pub-list li {
+            margin-bottom: 14px;
+        }
+
+        .pub-title {
+            font-weight: 600;
+        }
+
+        .pub-authors {
+            display: block;
+        }
+
+        .pub-venue {
+            display: block;
+            color: var(--muted);
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
         footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #1B5289;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 36px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 24px 18px 40px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-photo {
+                width: 180px;
+            }
         }
     </style>
 </head>
 <body>
+    <main class="page">
+        <header>
+            <h1>Yilin Li</h1>
+            <div class="topline">
+                Ph.D. Student, Department of Computer Science and Engineering, The Chinese University of Hong Kong
+            </div>
+            <div class="links">
+                <a href="https://scholar.google.com/citations?user=yGj3x8kAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                |
+                <a href="https://github.com/LaisaLI" target="_blank" rel="noopener">GitHub</a>
+                |
+                <a href="https://www.linkedin.com/in/yilin-li-a2b0771bb" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </header>
 
-<header>
-    <h1>YILIN LI</h1>
-    <div class="contact-info">
-        <a href="https://scholar.google.com/citations?user=yGj3x8kAAAAJ" target="_blank">Google Scholar</a> |
-        <a href="https://github.com/LaisaLI" target="_blank">GitHub</a> | 
-        <a href="https://www.linkedin.com/in/yilin-li-a2b0771bb" target="_blank">LinkedIn</a>
-    </div>
-</header>
+        <section class="intro">
+            <div>
+                <img class="profile-photo" src="./profile_pic.jpg" alt="Yilin Li">
+            </div>
+            <div>
+                <p>
+                    Hello! I am a Ph.D. student in the Department of Computer Science and Engineering at
+                    The Chinese University of Hong Kong, advised by
+                    <a href="https://hanruizha.github.io/" target="_blank" rel="noopener">Prof. Hanrui Zhang</a>.
+                </p>
+                <p>
+                    My research interests lie broadly in economics and computation, with a focus on online auctions,
+                    autobidding, mechanism design, information design, and learning in strategic environments.
+                    I am also interested in large language models and their applications in complex decision-making
+                    and workflow tasks.
+                </p>
+                <p>
+                    Before joining CUHK, I worked as a data scientist at Mercari Japan, where I worked on experimental
+                    design, predictive modeling, and mathematical optimization for personalized marketing strategies.
+                </p>
+            </div>
+        </section>
 
-<div class="container">
-    <div class="section">
-        <h2>About Me</h2>
-        <ul>
-            <li>A Data Scientist at Mercari Japan since April 2019. In this role, I conduct experiments to improve customer retention and develop frameworks for predictive modeling and mathematical optimization to personalize marketing strategies. My experience as a data scientist has brought me solid skills in statistics, machine learning, and mathematical optimization.</li>
-            <li>A passionate researcher focusing on Large Language Models (LLMs) and their applications. My interest in these technologies has driven me to explore various research projects, aiming to contribute meaningful advancements in the field.</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Economics and computation</li>
+                <li>Online auctions, autobidding, and online learning</li>
+                <li>Mechanism design and information design</li>
+                <li>Large language models and agentic decision-making systems</li>
+            </ul>
+        </section>
 
-    <div class="section">
-        <h2>Research Interests</h2>
-        <p>Over the past year, I have focused on exploring LLMs, particularly their potential as database interfaces. My research has revealed several challenges, including the inherent ambiguity of natural language contrasted with the need for precise answers, as well as the general knowledge of LLMs versus the specific domain expertise required for different databases. This underscores the necessity for strong reasoning capabilities within LLMs.</p>
-        <p>I am currently investigating how to build a high-quality dataset derived from industry use cases, along with the potential to automatically generate data samples and domain knowledge for each specific domain.</p>
-    </div>
+        <section>
+            <h2>Publications and Manuscripts</h2>
+            <p class="note">*: alphabetical order</p>
 
-    <div class="section">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>Beihang University, Beijing, China</strong><br>
-                Master of Engineering in Software Engineering, Sep 2016 – Jan 2019<br>
-                GPA: 3.48 (National Scholarship at 2018)
-            </li>
-            <li>
-                <strong>Beihang University, Beijing, China</strong><br>
-                Bachelor of Engineering in Software Engineering, Sep 2012 – Jun 2016<br>
-                GPA: 3.76, ranking 10/135
-            </li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Publications</h2>
+            <h3>2026+</h3>
+            <ol class="pub-list">
+                <li>
+                    <a class="pub-title" href="https://hanruizha.github.io/papers/price_discrimination.pdf" target="_blank" rel="noopener">
+                        The Limits of Price Discrimination with a Bayesian Seller
+                    </a>.
+                    <span class="pub-authors"><strong>Yilin Li</strong>, Yuan Deng, Wei Tang, Hanrui Zhang.</span>
+                    <span class="pub-venue">Twenty-Seventh ACM Conference on Economics and Computation (EC 2026).</span>
+                </li>
+            </ol>
+
+            <h3>2025</h3>
+            <ol class="pub-list">
+                <li>
+                    <a class="pub-title" href="https://arxiv.org/abs/2510.16869" target="_blank" rel="noopener">
+                        No-Regret Online Autobidding Algorithms in First-price Auctions
+                    </a>.
+                    <span class="pub-authors"><strong>Yilin Li</strong>, Yuan Deng, Wei Tang, Hanrui Zhang.</span>
+                    <span class="pub-venue">Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025).</span>
+                </li>
+            </ol>
+
             <h3>LLMs</h3>
-            <ul>
-                <li><a href="https://dl.acm.org/doi/abs/10.1145/3665939.3665969" target="_blank"><strong>Yilin Li</strong>, Jobson Deddy. LLMs as Interactive Database Interfaces for Designing Large Queries, June 2024 - SIGMOD 2024, Workshop on Human-in-the-Loop Data Analytics.</a></li>
-                <li><a href="https://dl.acm.org/doi/abs/10.1145/3664646.3665084" target="_blank">Jobson Deddy, <strong>Yilin Li</strong>. Investigating the Potential of Using Large Language Models for Scheduling, July 2024 - AIWARE 2024 Challenge Track.</a></li>
-            </ul>
+            <ol class="pub-list">
+                <li>
+                    <a class="pub-title" href="https://dl.acm.org/doi/abs/10.1145/3665939.3665969" target="_blank" rel="noopener">
+                        LLMs as Interactive Database Interfaces for Designing Large Queries
+                    </a>.
+                    <span class="pub-authors"><strong>Yilin Li</strong>, Jobson Deddy.</span>
+                    <span class="pub-venue">SIGMOD 2024, Workshop on Human-in-the-Loop Data Analytics.</span>
+                </li>
+                <li>
+                    <a class="pub-title" href="https://dl.acm.org/doi/abs/10.1145/3664646.3665084" target="_blank" rel="noopener">
+                        Investigating the Potential of Using Large Language Models for Scheduling
+                    </a>.
+                    <span class="pub-authors">Jobson Deddy, <strong>Yilin Li</strong>.</span>
+                    <span class="pub-venue">AIWARE 2024 Challenge Track.</span>
+                </li>
+            </ol>
+
             <h3>Data Science</h3>
-            <ul>
-                <li><a href="https://arxiv.org/abs/2404.10381" target="_blank">Jobson Deddy, <strong>Yilin Li (co-first author)</strong>, et al. Covariate Ordered Systematic Sampling as an Improvement to Randomized Controlled Trials, October 2024 - CIKM 2024 (accepted).</a></li>
-                <li><a href="https://arxiv.org/abs/2207.14798" target="_blank">Yang Jie, <strong>Yilin Li</strong>, Deddy Jobson. Personalized Promotion Decision Making Based on Direct and Enduring Effect Predictions, August 2022 - KDD 2022, 1st Workshop on End-End Customer Journey Optimization.</a></li>
-            </ul>
-            <h3>Intelligent Transportation (during the master period)</h3>
-            <ul>
-                <li><a href="https://dl.acm.org/doi/abs/10.1145/3325913" target="_blank">Wang Haiquan, <strong>Yilin Li</strong>, et al. Accurate Detection of Road Network Anomaly by Understanding Crowd’s Driving Strategies from Human Mobility, August 2019 - ACM Transactions on Spatial Algorithms and Systems.</a></li>
-                <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2018/8948676" target="_blank"><strong>Yilin Li</strong>, Wang Haiquan, et al. Multisource Data-Driven Modeling Method for Estimation of Intercity Trip Distribution, January 2018 - Mathematical Problems in Engineering.</a></li>
-            </ul>
-    </div>
-    <div class="section">
-        <h2>Languages</h2>
-        <ul>
-            <li>Chinese: Native</li>
-            <li>English: Five years of experience in English-speaking environments. TOEFL score of 101</li>
-            <li>Japanese: Able to handle basic communication. Passed JLPT N1 exam</li>
-        </ul>
-    </div>
-</div>
+            <ol class="pub-list">
+                <li>
+                    <a class="pub-title" href="https://arxiv.org/abs/2404.10381" target="_blank" rel="noopener">
+                        Covariate Ordered Systematic Sampling as an Improvement to Randomized Controlled Trials
+                    </a>.
+                    <span class="pub-authors">Jobson Deddy, <strong>Yilin Li</strong> (co-first author), et al.</span>
+                    <span class="pub-venue">CIKM 2024.</span>
+                </li>
+                <li>
+                    <a class="pub-title" href="https://arxiv.org/abs/2207.14798" target="_blank" rel="noopener">
+                        Personalized Promotion Decision Making Based on Direct and Enduring Effect Predictions
+                    </a>.
+                    <span class="pub-authors">Yang Jie, <strong>Yilin Li</strong>, Jobson Deddy.</span>
+                    <span class="pub-venue">KDD 2022, 1st Workshop on End-End Customer Journey Optimization.</span>
+                </li>
+            </ol>
 
-<footer>
-    <p>&copy; 2024 Yilin Li. All rights reserved.</p>
-</footer>
+            <h3>Intelligent Transportation</h3>
+            <ol class="pub-list">
+                <li>
+                    <a class="pub-title" href="https://dl.acm.org/doi/abs/10.1145/3325913" target="_blank" rel="noopener">
+                        Accurate Detection of Road Network Anomaly by Understanding Crowd's Driving Strategies from Human Mobility
+                    </a>.
+                    <span class="pub-authors">Haiquan Wang, <strong>Yilin Li</strong>, et al.</span>
+                    <span class="pub-venue">ACM Transactions on Spatial Algorithms and Systems, 2019.</span>
+                </li>
+                <li>
+                    <a class="pub-title" href="https://onlinelibrary.wiley.com/doi/full/10.1155/2018/8948676" target="_blank" rel="noopener">
+                        Multisource Data-Driven Modeling Method for Estimation of Intercity Trip Distribution
+                    </a>.
+                    <span class="pub-authors"><strong>Yilin Li</strong>, Haiquan Wang, et al.</span>
+                    <span class="pub-venue">Mathematical Problems in Engineering, 2018.</span>
+                </li>
+            </ol>
+        </section>
 
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>The Chinese University of Hong Kong</strong><br>
+                    Ph.D. in Computer Science and Engineering, 2025 &ndash; present<br>
+                    Advisor: <a href="https://hanruizha.github.io/" target="_blank" rel="noopener">Prof. Hanrui Zhang</a>
+                </li>
+                <li>
+                    <strong>Beihang University, Beijing, China</strong><br>
+                    Master of Engineering in Software Engineering, Sep 2016 &ndash; Jan 2019<br>
+                    GPA: 3.48; National Scholarship, 2018
+                </li>
+                <li>
+                    <strong>Beihang University, Beijing, China</strong><br>
+                    Bachelor of Engineering in Software Engineering, Sep 2012 &ndash; Jun 2016<br>
+                    GPA: 3.76; ranked 10/135
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li>Chinese: native</li>
+                <li>English: professional working proficiency; TOEFL 101</li>
+                <li>Japanese: JLPT N1</li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 Yilin Li.
+        </footer>
+    </main>
 </body>
 </html>
